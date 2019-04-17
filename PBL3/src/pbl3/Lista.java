@@ -10,19 +10,17 @@ package pbl3;
  * @author felip
  */
 public class Lista extends Html {
-        public void proportion(int index){
+        public double proportion(int index){
         switch(index){
             case 1:
-                this.setTamanho((int) (this.getTamanho() * 2.5));
-                break;
+                return this.getTamanho()*2.5;
             case 2:
-                this.setTamanho(this.getTamanho() * 2);
-                break;
+                return this.getTamanho()*2;
             case 3:
-                break;
+                return this.getTamanho();
             case 4:
-                this.setTamanho((int) (this.getTamanho() * 0.7));
-                break;
+                return this.getTamanho()*0.7;
         }
+        return 0;
     }
 }

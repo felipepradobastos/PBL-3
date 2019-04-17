@@ -10,16 +10,16 @@ package pbl3;
  * @author felip
  */
 public abstract class Html {
-    protected int tamanho;
+    protected double tamanho;
     protected String cor;
     
-    public abstract void proportion(int index);
+    public abstract double proportion(int index);
 
-    public int getTamanho() {
+    public double getTamanho() {
         return tamanho;
     }
 
-    public void setTamanho(int tamanho) {
+    public void setTamanho(double tamanho) {
         this.tamanho = tamanho;
     }
 

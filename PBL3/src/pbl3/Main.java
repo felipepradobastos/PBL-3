@@ -17,7 +17,11 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         Dispositivo dispcel = new Celular();
-        Dispositivo disp = new Dispositivo();
+        //Celular disp = new Celular();
+        //Notebook disp = new Notebook();
+        //Desktop disp = new Desktop();
+        Tablet disp = new Tablet();
+        //Dispositivo disp = new Dispositivo();
         Lista lista = new Lista();
         Paragrafo paragrafo = new Paragrafo();
         Link link = new Link();
@@ -31,12 +35,11 @@ public class Main {
         System.out.println("Lista Tam:"+lista.getTamanho());
         System.out.println("Paragrafo Tam:"+paragrafo.getTamanho());
         disp.addConteudo(link);
-        disp.addConteudo(paragrafo);
         disp.addConteudo(lista);
+        disp.addConteudo(paragrafo);
         System.out.println("-----------------------------");
         for(int i=0;i<disp.getConteudos().size();i++){
-            disp.getConteudos().get(i).proportion(dispcel.identify(dispcel));
-            System.out.println("Tamanho Elemento "+(i+1)+":"+disp.getConteudos().get(i).getTamanho());
+            System.out.println("Tamanho Elemento "+(i+1)+":"+disp.getConteudos().get(i).proportion(disp.identify(disp)));
         }
         
         
